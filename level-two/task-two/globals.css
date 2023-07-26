@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --primary: #f97316;
+    --primary-light: #fb923c;
+    --primary-dark: #ea580c;
+    --primary-super-dark: #c2410c;
+
+    --secondary: #f59e0b;
+    --secondary-light: #fbbf24;
+    --secondary-dark: #d97706;
+    --secondary-super-dark: #b45309;
+
+    --tertiary: #10b981;
+    --tertiary-light: #34d399;
+    --tertiary-dark: #059669;
+    --tertiary-super-dark: #047857;
+
+    --bg: #f9fafb;
+
+    --btn: #f59e0b;
+    --btn-hover: #fbbf24;
+    --btn-light: #ffedd5;
+
+    --gradient-1: #facc15;
+    --gradient-2: #2dd4bf;
+    --gradient-3: #38bdf8;
+
+    --white-1: #f9fafb;
+    --white-2: #f3f4f6;
+
+    --black-1: #111827;
+    --black-2: #1f2937;
+
+    --gray-1: #4b5563;
+    --gray-2: #6b7280;
+    --gray-3: #9ca3af;
+
+    --shadow-1: 0px 2px 50px hsla(152, 40%, 76%, 0.3);
+    --shadow-2: 0px -2px 12px hsl(252, 29%, 93%);
+    --shadow-3: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+    --shadow-4: 0px 15px 30px hsla(210, 30%, 32%, 0.05);
+    --shadow-5: 0px 15px hsla(241, 62%, 34%, 0.04);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a,
+button,
+li,
+ul,
+ol,
+input {
+    font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Manrope", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}

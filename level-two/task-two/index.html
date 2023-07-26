@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travigo - Travel Booking Agency</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="#">
+                        <h1>Travigo</h1>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li class="link">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="link">
+                        <a href="#bookings">Bookings</a>
+                    </li>
+                    <li class="link">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="link">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn btn-secondary">Sign In</button>
+            </nav>
+        </header>
+        <!-- <div class="gradient"></div> -->
+        <main hidden>
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>
+                        It's a Big World Out
+                        <br>
+                        There, Go Explore
+                    </h1>
+                    <p>
+                        We always make our customers happy with our services and deals by providing many choices.
+                    </p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary btn-large">Get Started</button>
+                        <button class="btn btn-secondary btn-large">Book Now</button>
+                    </div>
+                </div>
+                <div class="gradient gradient-one"></div>
+                <div class="gradient gradient-two"></div>
+                <!-- <div class="gradient-one"></div> -->
+            </section>
+            <section class="main-section">
+                <h2>Book Your Trip</h2>
+                <form class="booking-form">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input
+                            type="text"
+                            id="destination"
+                            placeholder="Enter your destination"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Travel Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rooms">Number of Rooms</label>
+                        <input
+                            type="number"
+                            id="rooms"
+                            min="1"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input
+                            type="number"
+                            id="guests"
+                            min="1"
+                            required
+                        >
+                    </div>
+                    <button class="btn btn-primary">Search</button>
+                    <button class="btn btn-secondary">Book Now</button>
+                </form>
+            </section>
+        </main>
+        <main>
+            <section class="hero-section" id="#">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>
+                            It's a Big World Out There, Go
+                            <span>Explore</span>
+                        </h1>
+                        <p>We always make our customers happy with our services and deals by providing many choices.</p>
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary btn-large">
+                                Explore Now
+                                <ion-icon name="arrow-forward-outline" size="small"></ion-icon>
+                            </button>
+                            <!-- <button class="btn btn-secondary">Book Now</button> -->
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="/images/hero2.png" alt="Hero Image">
+                    </div>
+                </div>
+            </section>
+            <section class="booking" id="bookings">
+                <div class="container">
+                    <div class="booking-block">
+                        <div class="booking-group">
+                            <div class="location">
+                                <div class="label" id="location-label">
+                                    Location
+                                    <ion-icon name="chevron-down-outline"></ion-icon>
+                                </div>
+                                <span class="selected-option" id="location-option">
+                                    Select
+                                </span>
+                                <div class="dropdown-content" id="dropdown">
+                                    <div class="option">Option 1</div>
+                                    <div class="option">Option 2</div>
+                                    <div class="option">Option 3</div>
+                                </div>
+                            </div>
+                            <div class="date">
+                                <div class="label">
+                                    Travel Date
+                                    <ion-icon name="chevron-down-outline"></ion-icon>
+                                </div>
+                                <span class="selected-option" id="date-option">
+                                    Select
+                                </span>
+                                <!-- <div class="options" id="date-options">
+                                    <div class="option">Option 1</div>
+                                    <div class="option">Option 2</div>
+                                    <div class="option">Option 3</div>
+                                </div> -->
+                            </div>
+                            <div class="rooms">
+                                <div class="label">
+                                    Rooms
+                                    <ion-icon name="chevron-down-outline"></ion-icon>
+                                </div>
+                                <span class="selected-option" id="rooms-option">
+                                    Select
+                                </span>
+                                <!-- <div class="options" id="rooms-options">
+                                    <div class="option">Option 1</div>
+                                    <div class="option">Option 2</div>
+                                    <div class="option">Option 3</div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="navigateToBookingPage()">
+                            Book Now
+                        </button>
+                    </div>
+                    <div class="content">
+                        <div class="content-header container">
+                            <h1>
+                                Discover your favorite
+                                <br>
+                                Destination
+                            </h1>
+                            <button class="btn btn-icon">
+                                <ion-icon name="chevron-forward-outline" size="small"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="destination-section">
+                            <div class="destination-container">
+                                <div class="card">
+                                    <img src="/images/destination-one.jpg" alt="Destination 1">
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <h3 class="destination-title">
+                                                Empire State Building
+                                            </h3>
+                                            <p class="price">$199</p>
+                                        </div>
+                                        <p class="destination-description">
+                                            <ion-icon name="location-outline"></ion-icon>
+                                            <span>
+                                                New York, United States
+                                            </span>
+                                        </p>
+                                        <div class="card-footer">
+                                            <div class="rating">
+                                                <span class="rating-stars">★★★★★</span>
+                                                <span class="rating-value">4.8</span>
+                                            </div>
+                                            <button class="btn btn-secondary btn-small">Book Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="/images/destination-two.jpg" alt="Destination 2">
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <h3 class="destination-title">
+                                                Hobbiton
+                                            </h3>
+                                            <p class="price">$199</p>
+                                        </div>
+                                        <p class="destination-description">
+                                            <ion-icon name="location-outline"></ion-icon>
+                                            <span>
+                                                Matamata, New Zealand
+                                            </span>
+                                        </p>
+                                        <div class="card-footer">
+                                            <div class="rating">
+                                                <span class="rating-stars">★★★★★</span>
+                                                <span class="rating-value">4.5</span>
+                                            </div>
+                                            <button class="btn btn-secondary btn-small">Book Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="/images/destination-three.jpg" alt="Destination 3">
+                                    <div class="card-content">
+                                        <div class="card-header">
+                                            <h3 class="destination-title">
+                                                Victoria Memorial
+                                            </h3>
+                                            <p class="price">$199</p>
+                                        </div>
+                                        <p class="destination-description">
+                                            <ion-icon name="location-outline"></ion-icon>
+                                            <span>
+                                                Kolkata, India
+                                            </span>
+                                        </p>
+                                        <div class="card-footer">
+                                            <div class="rating">
+                                                <span class="rating-stars">★★★★★</span>
+                                                <span class="rating-value">4.9</span>
+                                            </div>
+                                            <button class="btn btn-secondary btn-small">Book Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-section" id="about">
+                <div class="about-container">
+                    <div class="about-content">
+                        <h2>
+                            Who We Are
+                        </h2>
+                        <p>
+                            We always make our customers happy with our services and deals by providing many choices of
+                            places to visit and stay. We also provide the best prices for our customers. We always make
+                            our customers happy with our services and deals by providing many choices of places to visit
+                            and stay. We also provide the best prices for our customers.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="/images/about-us.png" alt="About Image">
+                    </div>
+                </div>
+            </section>
+            <section class="contact-section" id="contact">
+                <div class="contact-container">
+                    <h2>Contact Us</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Your Name"
+                                required
+                                width="100%"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Your Email"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                placeholder="Subject"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </section>
+            <footer class="footer-section">
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <h3>
+                            Travigo
+                        </h3>
+                        <p>
+                            We always make our customers happy with our services and deals by providing many choices of places to visit and stay.
+                        </p>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Resources
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Services</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h3>
+                            Support
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <a href="#">Webinars</a>
+                            </li>
+                            <li>
+                                <a href="#">System</a>
+                            </li>
+                            <li>
+                                <a href="#">Team</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <p>123 Main Street, Pune, India</p>
+                        <p>Email: trivago@help.com</p>
+                        <p>Phone: +1 123 456789</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Travigo. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

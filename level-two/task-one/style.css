@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(to bottom right, #fbbf24, #ec4899);
+}
+
+header {
+    background-color: #333333;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.text-container {
+    max-width: 500px;
+    margin-left: 50px;
+    color: #333333;
+}
+
+.qualities-section {
+    background: linear-gradient(to bottom right, #ffffff, #f1f1f1);
+    padding: 50px;
+    text-align: center;
+}
+
+.qualities-container {
+    display: grid;
+    gap: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.quality {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-justify: auto;
+    cursor: pointer;
+}
+
+.quality:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.quality ion-icon {
+    font-size: 30px;
+    color: #333333;
+}
+
+.inspiration-section {
+    background: linear-gradient(to bottom right, #fbbf24, #ec4899);
+    padding: 50px;
+    text-align: center;
+}
+
+.quote-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.quote-container p {
+    font-style: italic;
+    color: #1e293b;
+}
+
+.paragraph {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.inspiration-section p {
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #333333;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}

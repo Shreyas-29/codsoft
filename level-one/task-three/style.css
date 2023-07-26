@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #121212;
+}
+
+h1,
+p,
+button,
+input {
+    font-family: "Inter", sans-serif;
+}
+
+ion-icon {
+    --ionicon-stroke-width: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.calculator {
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #f1f5f9;
+    border: 0.5px solid #f3f3f3;
+    border-radius: 6px;
+    color: #333333;
+    text-align: right;
+}
+
+#display input {
+    font-family: "Inter", sans-serif;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 18px;
+    background-color: #f3f4f6;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #e2e2e2;
+    scale: 1.05;
+    transition: background-color 0.2s ease-out;
+}
+
+button:active {
+    scale: 0.9;
+    transition: all 0.2s ease-out;
+}
+
+.operator {
+    background-color: #ff9f00;
+    color: white;
+}
+
+.operator:hover {
+    background-color: #ff7c00;
+}
+
+.operation {
+    background-color: #f1f5f9;
+    color:  #333333;
+}
+
+.operation:hover {
+    background-color: #e2e8f0;
+}
+
+.backspace {
+    grid-column: span 2;
+}
+
+.equal {
+    grid-column: span 2;
+    background-color: #ff9f00;
+    color: white;
+}
+
+.equal:hover {
+    background-color: #ff7c00;
+}
+
+.calculator-animation {
+    animation: slideIn 0.4s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
