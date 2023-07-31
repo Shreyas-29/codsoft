@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Travigo - Travel Booking Agency</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/globals.css">
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </head>
@@ -30,70 +31,14 @@
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
-                <button class="btn btn-secondary">Sign In</button>
+                <button class="btn btn-secondary">
+                    <a href="./signin.html">Sign In</a>
+                </button>
             </nav>
         </header>
-        <!-- <div class="gradient"></div> -->
-        <main hidden>
-            <section class="hero-section">
-                <div class="hero-content">
-                    <h1>
-                        It's a Big World Out
-                        <br>
-                        There, Go Explore
-                    </h1>
-                    <p>
-                        We always make our customers happy with our services and deals by providing many choices.
-                    </p>
-                    <div class="cta-buttons">
-                        <button class="btn btn-primary btn-large">Get Started</button>
-                        <button class="btn btn-secondary btn-large">Book Now</button>
-                    </div>
-                </div>
-                <div class="gradient gradient-one"></div>
-                <div class="gradient gradient-two"></div>
-                <!-- <div class="gradient-one"></div> -->
-            </section>
-            <section class="main-section">
-                <h2>Book Your Trip</h2>
-                <form class="booking-form">
-                    <div class="form-group">
-                        <label for="destination">Destination</label>
-                        <input
-                            type="text"
-                            id="destination"
-                            placeholder="Enter your destination"
-                            required
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Travel Date</label>
-                        <input type="date" id="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="rooms">Number of Rooms</label>
-                        <input
-                            type="number"
-                            id="rooms"
-                            min="1"
-                            required
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="guests">Number of Guests</label>
-                        <input
-                            type="number"
-                            id="guests"
-                            min="1"
-                            required
-                        >
-                    </div>
-                    <button class="btn btn-primary">Search</button>
-                    <button class="btn btn-secondary">Book Now</button>
-                </form>
-            </section>
-        </main>
+        <div class="gradient"></div>
         <main>
+            <!-- ----------- Hero ----------- -->
             <section class="hero-section" id="#">
                 <div class="container">
                     <div class="hero-content">
@@ -111,41 +56,51 @@
                         </div>
                     </div>
                     <div class="hero-image">
-                        <img src="/images/hero2.png" alt="Hero Image">
+                        <img src="./images/hero2.png" alt="Hero Image">
                     </div>
                 </div>
             </section>
+            <!-- ----------- Booking ----------- -->
             <section class="booking" id="bookings">
                 <div class="container">
                     <div class="booking-block">
                         <div class="booking-group">
                             <div class="location">
                                 <div class="label" id="location-label">
-                                    Location
+                                    <label for="location-option">
+                                        Location
+                                    </label>
                                     <ion-icon name="chevron-down-outline"></ion-icon>
                                 </div>
-                                <span class="selected-option" id="location-option">
-                                    Select
-                                </span>
-                                <div class="dropdown-content" id="dropdown">
-                                    <div class="option">Option 1</div>
-                                    <div class="option">Option 2</div>
-                                    <div class="option">Option 3</div>
-                                </div>
+                                <select id="location-option" class="location-option">
+                                    <option class="location-value" value="New York">New York</option>
+                                    <option class="location-value" value="London">London</option>
+                                    <option class="location-value" value="Paris">Paris</option>
+                                    <option class="location-value" value="Tokyo">Tokyo</option>
+                                    <option class="location-value" value="Dubai">Dubai</option>
+                                    <option class="location-value" value="Singapore">Singapore</option>
+                                    <option class="location-value" value="Mumbai">Mumbai</option>
+                                    <option class="location-value" value="Kolkata">Kolkata</option>
+                                    <option class="location-value" value="Delhi">Delhi</option>
+                                    <option class="location-value" value="Bangalore">Bangalore</option>
+                                    <option class="location-value" value="Chennai">Chennai</option>
+                                    <option class="location-value" value="Hyderabad">Hyderabad</option>
+                                    <option class="location-value" value="Ahmedabad">Ahmedabad</option>
+                                    <option class="location-value" value="Pune">Pune</option>
+                                    <option class="location-value" value="Jaipur">Jaipur</option>
+                                    <option class="location-value" value="Surat">Surat</option>
+                                    <option class="location-value" value="Lucknow">Lucknow</option>
+                                    <option class="location-value" value="Kanpur">Kanpur</option>
+                                </select>
                             </div>
                             <div class="date">
-                                <div class="label">
-                                    Travel Date
+                                <div class="label" id="date-option">
+                                    <label for="date-options">
+                                        Travel Date
+                                    </label>
                                     <ion-icon name="chevron-down-outline"></ion-icon>
                                 </div>
-                                <span class="selected-option" id="date-option">
-                                    Select
-                                </span>
-                                <!-- <div class="options" id="date-options">
-                                    <div class="option">Option 1</div>
-                                    <div class="option">Option 2</div>
-                                    <div class="option">Option 3</div>
-                                </div> -->
+                                <input type="date" id="date-options" class="date-options">
                             </div>
                             <div class="rooms">
                                 <div class="label">
@@ -180,7 +135,7 @@
                         <div class="destination-section">
                             <div class="destination-container">
                                 <div class="card">
-                                    <img src="/images/destination-one.jpg" alt="Destination 1">
+                                    <img src="./images/destination-one.jpg" alt="Destination 1">
                                     <div class="card-content">
                                         <div class="card-header">
                                             <h3 class="destination-title">
@@ -204,7 +159,7 @@
                                     </div>
                                 </div>
                                 <div class="card">
-                                    <img src="/images/destination-two.jpg" alt="Destination 2">
+                                    <img src="./images/destination-two.jpg" alt="Destination 2">
                                     <div class="card-content">
                                         <div class="card-header">
                                             <h3 class="destination-title">
@@ -228,7 +183,7 @@
                                     </div>
                                 </div>
                                 <div class="card">
-                                    <img src="/images/destination-three.jpg" alt="Destination 3">
+                                    <img src="./images/destination-three.jpg" alt="Destination 3">
                                     <div class="card-content">
                                         <div class="card-header">
                                             <h3 class="destination-title">
@@ -256,6 +211,7 @@
                     </div>
                 </div>
             </section>
+            <!-- ----------- About ----------- -->
             <section class="about-section" id="about">
                 <div class="about-container">
                     <div class="about-content">
@@ -270,10 +226,11 @@
                         </p>
                     </div>
                     <div class="about-image">
-                        <img src="/images/about-us.png" alt="About Image">
+                        <img src="./images/about-us.png" alt="About Image">
                     </div>
                 </div>
             </section>
+            <!-- ----------- Contact ----------- -->
             <section class="contact-section" id="contact">
                 <div class="contact-container">
                     <h2>Contact Us</h2>
@@ -314,6 +271,7 @@
                     </form>
                 </div>
             </section>
+            <!-- ----------- Footer ----------- -->
             <footer class="footer-section">
                 <div class="footer-container">
                     <div class="footer-content">
@@ -374,6 +332,7 @@
                 </div>
             </footer>
         </main>
-        <script src="script.js"></script>
+        <script src="./index.js"></script>
+        <script src="./main.js"></script>
     </body>
 </html>

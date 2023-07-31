@@ -1,0 +1,14 @@
+{
+  "name": "trivago",
+  "version": "1.0.0",
+  "description": "This is a travel booking agency",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shreyas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,23 +1,13 @@
-function toggleOption(type) {
-    const options = document.getElementById(`${type}-options`);
-    options.classList.toggle('show-options');
-}
 
-function navigateToBookingPage() {
-    // Add the URL of the booking page here
-    window.location.href = 'booking.html';
-}
+const express = require('express');
+const app = express();
+const path = require('path');
 
-document.getElementById('location-label').addEventListener('click', function () {
-    const dropdown = document.getElementById('dropdown');
-    dropdown.classList.toggle('show');
-});
+// Serve static files (HTML, CSS, etc.)
+app.use(express.static(path.join(__dirname, 'src')));
 
-// Close dropdown when clicking outside
-window.addEventListener('click', function (event) {
-    const dropdown = document.getElementById('dropdown');
-    const locationLabel = document.getElementById('location-label');
-    if (event.target !== locationLabel && !locationLabel.contains(event.target)) {
-        dropdown.classList.remove('show');
-    }
+// Start the server
+const port = 3000; // Replace with your desired port number
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}.`);
 });
