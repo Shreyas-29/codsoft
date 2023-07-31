@@ -1,11 +1,11 @@
-import React from "react";
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import React from "react";
 
-import '@/styles/globals.css';
-import '@/styles/editor.css';
 import { Navbar, Providers } from "@/components";
-import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/Toaster";
+import { cn } from "@/lib/utils";
+import '@/styles/editor.css';
+import '@/styles/globals.css';
 
 const fontInter = Inter({
     subsets: ['latin'],
@@ -25,7 +25,7 @@ export const metadata = {
             '/public/logo.svg'
         ]
     }
-}
+};
 
 export default function RootLayout({
     children,
