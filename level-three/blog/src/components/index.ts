@@ -11,6 +11,7 @@ import PostDetails from "./PostDetails";
 import PostDelete from "./PostDelete";
 import UserForm from "./UserForm";
 import Loader from "./Loader";
+import Feed from "./Feed";
 
 
 import { Icons } from "./Icons";
@@ -30,5 +31,6 @@ export {
     PostDetails,
     PostDelete,
     UserForm,
-    Loader
+    Loader,
+    Feed
 }
