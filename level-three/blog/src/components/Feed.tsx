@@ -17,6 +17,6 @@ const Feed = async () => {
             <PostBox posts={blogs} />
         </div>
     );
-}
+};
 
 export default Feed;
