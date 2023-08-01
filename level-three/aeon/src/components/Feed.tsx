@@ -13,7 +13,7 @@ const Feed = async () => {
     });
 
     return (
-        <div className='container grid w-full h-full max-w-2xl grid-cols-1 py-10 mx-auto gap-y-8'>
+        <div className='container grid w-full h-full max-w-2xl grid-cols-1 py-10 mx-auto'>
             <PostBox posts={blogs} />
         </div>
     );
