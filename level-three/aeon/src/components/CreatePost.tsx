@@ -6,13 +6,16 @@ import { uploadFiles } from '@/lib/uploadthing';
 import EditorJS from '@editorjs/editorjs';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from '@tanstack/react-query';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { useRouter } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import TextareaAutosize from 'react-textarea-autosize';
+import { useCustomToast } from '@/hooks/use-custom-toast';
 
 const CreatePost = () => {
+
+    const { loginToast } = useCustomToast();
 
     const ref = useRef<EditorJS>();
 
@@ -143,7 +146,13 @@ const CreatePost = () => {
             const { data } = await axios.post('/api/p/create', payload);
             return data;
         },
-        onError: () => {
+        onError: (error) => {
+            if (error instanceof AxiosError) {
+                if (error.response?.status === 401) {
+                    return loginToast()
+                }
+            }
+
             toast({
                 title: "Something went wrong",
                 description: "We couldn't create your post. Please try again later.",
