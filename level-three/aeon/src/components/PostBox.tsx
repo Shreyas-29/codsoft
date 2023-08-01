@@ -15,8 +15,8 @@ const PostBox: FC<PostProps> = ({
     return (
         <div className='relative flex flex-col items-center justify-center w-full gap-y-8'>
             {posts?.map((post) => (
-                <div className="flex items-center w-full max-w-full p-4 overflow-hidden bg-white border rounded-lg hover:bg-neutral-50 md:rounded-xl hover:border-slate-300 md:px-6 md:py-4 group">
-                    <Link key={post.id} href={`/p/${post.id}`} passHref className='flex flex-col items-start w-full'>
+                <div key={post.id} className="flex items-center w-full max-w-full p-4 overflow-hidden bg-white border rounded-lg hover:bg-neutral-50 md:rounded-xl hover:border-slate-300 md:px-6 md:py-4 group">
+                    <Link href={`/p/${post.id}`} passHref className='flex flex-col items-start w-full'>
                         <div className='flex flex-col items-start w-full gap-y-4'>
                             <div className='flex items-start gap-3'>
                                 <Image
