@@ -15,13 +15,21 @@ interface EditorOutputProps {
 
 const style = {
     paragraph: {
-        fontSize: '1rem',
-        lineHeight: '28px',
-        margin: '1rem 0',
         display: 'flex',
         flexWrap: 'wrap',
+        textAlign: 'justify'
+    },
+    ol: {
+        textAlign: 'justify',
+        marginTop: '16px',
+        marginBottom: '16px'
+    },
+    li: {
+        textAlign: 'justify',
+        marginTop: '16px',
+        marginBottom: '16px'
     }
-}
+};
 
 const renderers = {
     image: CustomImageRenderer,
@@ -36,7 +44,7 @@ const EditorOutput: FC<EditorOutputProps> = ({
             data={content}
             style={style}
             renderers={renderers}
-            className='h-full my-2'
+            className='h-full my-2 text-sm !text-justify'
         />
     )
 }
